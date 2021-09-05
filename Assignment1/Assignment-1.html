@@ -1,0 +1,115 @@
+<html>
+<head>
+    <script src="../Typescript/Assignment-1.ts" type="script"></script>
+</head>
+<body>
+<form id="register">
+ <div style="text-align:center">
+        Enter the radius for your circle:
+        <input type="number" id="txtRadius" size="10" />
+        <br>
+        <input type="button" value="Calculate radious" onclick="CalculateArea()"/>
+        </div>
+
+        <div style="text-align:center">
+                Enter the radius for your circle:
+                <br>
+                <input type="number" id="txtfact" size="10" />
+                <input type="button" value="Calculate factorial" onclick="CalculateFactorial()"/>
+                </div>
+
+                <div style="text-align:center">
+                        Enter the radius for your circle:
+                        <br>
+                        <input type="number" id="txtprime" size="10" />
+                        <input type="button" value="Calculate prime Number" onclick="CalculateprimeNo()"/>
+                        </div>
+                        <div style="text-align:center">
+                                Enter the No for Fibbo Series:
+                                <br>
+                                <input type="number" id="txtfibo" size="10" />
+                                <input type="button" value="Fibbo Number" onclick="fibonaccy()"/>
+                                </div>
+
+                        
+                
+</form>
+</body>
+</html>
+
+
+
+
+        <script>
+        
+        function CalculateArea() {
+            var radius = 
+            parseInt(document.getElementById('txtRadius').value); //String Changes to Integer
+            
+            if (0 < radius)
+                alert("The area of the circle is " + (radius * radius * Math.PI));
+            else
+                alert("Error - radius must be whole number greater than 0.");
+            return false;
+        }
+        
+        
+function CalculateFactorial(txtfact) {
+        
+// take input
+//const num = prompt('Enter a positive number: ');
+var newtxtfact = 
+            parseInt(document.getElementById('txtfact').value); //String Changes to Integer
+            
+alert(`The factors of ${newtxtfact} is:`);
+
+// looping through 1 to num
+for(let i = 1; i <= newtxtfact; i++) {
+
+    // check if number is a factor
+    if(newtxtfact % i == 0) {
+        console.log(i);
+    }
+}
+}
+function CalculateprimeNo() {
+        
+        // take input
+        //const num = prompt('Enter a positive number: ');
+        var num =  parseInt(document.getElementById('txtprime').value); //String Changes to Integer
+                    
+              if(num < 2){
+               //return false;
+               alert("not in prime");
+            }
+for (let k = 2; k < num; k++){
+  if( num % k == 0){
+   // return false;
+    alert("false prime");
+  }
+
+else{
+      alert("true prime");
+      exit;
+      //return true;
+    }}
+//alert("true");   
+}
+
+
+
+
+function fibonaccy(num) {
+    var fibonacci =  parseInt(document.getElementById('txtfibo').value); //String Changes to Integer
+    let n1 = 1, n2 = 2, nextTerm;
+
+console.log('Fibonacci Series:');
+
+for (let i = 1; i <= fibonacci; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+}
+  </script>
